@@ -34,8 +34,6 @@ main() {
     page=${PAGE:-1}
     outfile=${OUTFILE:-${INFILE%.pdf}.png}
 
-    echo "Outfile: ${outfile}"
-
     current_size=$(max_size_of_pdf "${INFILE}" "${resolution_in_ppi}")
 
     if is gt "${current_size}" "${maxsize_in_px}"; then
