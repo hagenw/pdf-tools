@@ -46,7 +46,7 @@ main() {
 
     pdf_to_png "${options}" "${INFILE}" "${outfile}"
 
-    compress "${OUTFILE}"
+    compress "${outfile}"
 
     return
 }
