@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source "units.sh"
+include "units.sh"
 
 readonly PROGNAME=$(basename "$0")
 readonly ARGS=("$@")
