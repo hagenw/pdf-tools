@@ -25,24 +25,23 @@ usage() {
 }
 
 main() {
-    local outfile current_size options
-
-    # Default values, can be overwritten by ARGS
-    RESOLUTION=300 # in ppi
-    MAXSIZE=800    # in px
-    PAGE=1
+    local resolution_in_ppi maxsize_in_px page outfile current_size options
 
     cmdline "${ARGS[@]}"
 
+    resolution_in_ppi=${RESOLUTION:-300}
+    maxsize_in_px=${MAXSIZE:-800}
+    page=${PAGE:-1}
     outfile=${OUTFILE:-${INFILE%.pdf}.png}
+
     echo "Outfile: ${outfile}"
 
-    current_size=$(max_size_of_pdf "${INFILE}" "${RESOLUTION}")
+    current_size=$(max_size_of_pdf "${INFILE}" "${resolution_in_ppi}")
 
-    if is gt "${current_size}" "${MAXSIZE}"; then
-        options="-f ${PAGE} -r ${RESOLUTION} -scale-to ${MAXSIZE}"
+    if is gt "${current_size}" "${maxsize_in_px}"; then
+        options="-f ${page} -r ${resolution_in_ppi} -scale-to ${maxsize_in_px}"
     else
-        options="-f ${PAGE} -r ${RESOLUTION}"
+        options="-f ${page} -r ${resolution_in_ppi}"
     fi
 
     pdf_to_png "${options}" "${INFILE}" "${outfile}"
