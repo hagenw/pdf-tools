@@ -17,7 +17,7 @@ echo 'PATH="${PATH}:${HOME}/git/pdf-tools"' >> ~/.bashrc
 
 Replace `~/git/pdf-tools` with your desired directory.
 
-Install [simply-bash] by cloning it and sourcing the `simply-bash.sh`, e.g.:
+Install [simply-bash] by cloning it and sourcing `simply-bash.sh`, e.g.
 
 ```bash
 git clone https://github.com/hagenw/simply-bash.git ~/git/simply-bash
