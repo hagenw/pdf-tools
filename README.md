@@ -5,7 +5,7 @@ Bash scripts to manipulate PDF files.
 
 ## Installation
 
-PDF tools depends on [simply-bash] and on [is.sh].
+PDF tools depends on [simply-bash].
 
 Install all files of [pdf-tools] into a directory in your `$PATH`. The easiest
 way to achieve this is to clone the repository and add it to your `$PATH`:
@@ -24,16 +24,8 @@ git clone https://github.com/hagenw/simply-bash.git ~/git/simply-bash
 source ~/git/simply-bash/simply-bash.sh
 ```
 
-Install [is.sh], into your simply-bash folder or in another folder included in
-`$PATH`, e.g.
-
-```bash
-wget https://github.com/qzb/is.sh/raw/master/is.sh -O "${HOME}/.local/bin/is"
-```
-
 [pdf-tools]: https://github.com/hagenw/pdf-tools.git
 [simply-bash]: https://github.com/hagenw/simply-bash
-[is.sh]: https://github.com/qzb/is.sh
 
 
 ## Usage
