@@ -1,9 +1,9 @@
 #!/bin/bash
 
 if is available basher; then
-    include "hagenw/simply-bash" "units.sh"
+    include "hagenw/simply-bash" "lib/units.sh"
 else
-    include "units.sh"
+    include "lib/units.sh"
 fi
 
 readonly PROGNAME=$(basename "$0")
