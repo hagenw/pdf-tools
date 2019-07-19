@@ -1,0 +1,1 @@
+DEPS=hagenw/simply-bash

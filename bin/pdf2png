@@ -1,6 +1,10 @@
 #!/bin/bash
 
-include "units.sh"
+if is available basher; then
+    include "hagenw/simply-bash" "lib/units.sh"
+else
+    include "lib/units.sh"
+fi
 
 readonly PROGNAME=$(basename "$0")
 readonly ARGS=("$@")
